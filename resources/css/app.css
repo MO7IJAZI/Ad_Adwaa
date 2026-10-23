@@ -1,0 +1,163 @@
+@import 'tailwindcss';
+
+@import 'tw-animate-css';
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    --font-sans:
+        'Cairo', 'Segoe UI', ui-sans-serif, system-ui, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+
+    --radius-lg: var(--radius);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-sm: calc(var(--radius) - 4px);
+
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+    --background: oklch(1 0 0);
+    --foreground: oklch([PII_PHONE_392]);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch([PII_PHONE_393]);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch([PII_PHONE_394]);
+    --primary: oklch([PII_PHONE_395]);
+    --primary-foreground: oklch([PII_PHONE_396]);
+    --secondary: oklch([PII_PHONE_397]);
+    --secondary-foreground: oklch([PII_PHONE_398]);
+    --muted: oklch([PII_PHONE_399]);
+    --muted-foreground: oklch([PII_PHONE_400]);
+    --accent: oklch([PII_PHONE_401]);
+    --accent-foreground: oklch([PII_PHONE_402]);
+    --destructive: oklch([PII_PHONE_1]);
+    --destructive-foreground: oklch([PII_PHONE_1]);
+    --border: oklch([PII_PHONE_403]);
+    --input: oklch([PII_PHONE_403]);
+    --ring: oklch([PII_PHONE_404]);
+    --chart-1: oklch([PII_PHONE_405]);
+    --chart-2: oklch([PII_PHONE_404]);
+    --chart-3: oklch([PII_PHONE_405]);
+    --chart-4: oklch([PII_PHONE_406]);
+    --chart-5: oklch([PII_PHONE_406]);
+    --radius: 0.625rem;
+    --sidebar: oklch([PII_PHONE_407]);
+    --sidebar-foreground: oklch([PII_PHONE_393]);
+    --sidebar-primary: oklch([PII_PHONE_408]);
+    --sidebar-primary-foreground: oklch([PII_PHONE_409]);
+    --sidebar-accent: oklch([PII_PHONE_410]);
+    --sidebar-accent-foreground: oklch([PII_PHONE_411]);
+    --sidebar-border: oklch([PII_PHONE_403]);
+    --sidebar-ring: oklch([PII_PHONE_412]);
+}
+
+.dark {
+    --background: oklch([PII_PHONE_413]);
+    --foreground: oklch([PII_PHONE_414]);
+    --card: oklch([PII_PHONE_415]);
+    --card-foreground: oklch([PII_PHONE_414]);
+    --popover: oklch([PII_PHONE_413]);
+    --popover-foreground: oklch([PII_PHONE_414]);
+    --primary: oklch([PII_PHONE_416]);
+    --primary-foreground: oklch([PII_PHONE_417]);
+    --secondary: oklch([PII_PHONE_418]);
+    --secondary-foreground: oklch([PII_PHONE_419]);
+    --muted: oklch([PII_PHONE_420]);
+    --muted-foreground: oklch([PII_PHONE_421]);
+    --accent: oklch([PII_PHONE_422]);
+    --accent-foreground: oklch([PII_PHONE_423]);
+    --destructive: oklch([PII_PHONE_7]);
+    --destructive-foreground: oklch([PII_PHONE_8]);
+    --border: oklch([PII_PHONE_424]);
+    --input: oklch([PII_PHONE_424]);
+    --ring: oklch([PII_PHONE_425]);
+    --chart-1: oklch([PII_PHONE_426]);
+    --chart-2: oklch([PII_PHONE_427]);
+    --chart-3: oklch([PII_PHONE_428]);
+    --chart-4: oklch([PII_PHONE_429]);
+    --chart-5: oklch([PII_PHONE_430]);
+    --sidebar: oklch([PII_PHONE_431]);
+    --sidebar-foreground: oklch([PII_PHONE_432]);
+    --sidebar-primary: oklch([PII_PHONE_433]);
+    --sidebar-primary-foreground: oklch([PII_PHONE_434]);
+    --sidebar-accent: oklch([PII_PHONE_435]);
+    --sidebar-accent-foreground: oklch([PII_PHONE_436]);
+    --sidebar-border: oklch([PII_PHONE_437]);
+    --sidebar-ring: oklch([PII_PHONE_438]);
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-background text-foreground antialiased;
+        font-feature-settings: 'kern', 'liga', 'calt';
+        text-rendering: optimizeLegibility;
+    }
+
+    ::selection {
+        @apply bg-primary/20;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+}
